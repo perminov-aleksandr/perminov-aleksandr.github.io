@@ -6,44 +6,29 @@
 
 html, body {
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
 
 body {       
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24pt;
-}
-
-body * {
-    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 24px;
 }
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 6em;
-    padding: 50px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
     margin: 0;
     text-transform: uppercase;
 }
 
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
-    padding-top: 70px;
-    padding-bottom: 50px;
     margin: 0;
     text-transform: uppercase;
 }
 
-a {    
-    text-decoration: none;
-    color: white;
-    background-color: var(--accent-color);
-    padding: 10px;
-    border-radius: var(--border-radius);    
-    transition: all 0.15s linear;
+a {
+    text-decoration: none;    
 }
-
 a:hover {
     opacity: 0.8;
 }
@@ -54,85 +39,160 @@ a:hover {
 
 .container {
     display: block;
-    width: 1024px;
+    min-width: 320px; 
+    max-width: 1024px;    
     margin: 0;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .header {
     display: block;
     margin: 0;
-    padding: 70px 0 50px 0;        
-    width: 100%;        
-    height: 90%;
+    padding: 70px 0 50px 0;    
     background-color: var(--background-color);
 }
 
-.subheader {
-    font-size: 1.5em;
-    margin: 20px 0;
-    padding: 20px 0;
+
+    h1 {
+        font-size: 12rem;
+        padding: 50px 0;
+    }
+
+    h2 {        
+        font-size: 4rem;
+        padding-top: 70px;
+        padding-bottom: 50px;        
+    }
+
+    .container {        
+        max-width: 1280px;         
+    }
+
+    .subheader {
+        font-size: 3rem;
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    .sub-subheader {
+        font-size: 2.4rem;
+        opacity: 0.6;
+    }
+
+    .header a {
+        display: inline-block;
+        padding: 10px;
+        margin: 0;
+        background-color: var(--accent-color);
+        border-radius: var(--border-radius);
+        color: white;
+    }
+
+    .header a:hover {
+        opacity: 0.8;
+    }
+
+    .projects {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project {
+        display: block;
+        padding: 20px 0 40px 0;
+    }
+
+    .project-name {
+        --padding: 0.2rem;
+        font-size: 2.6rem;
+        color: white;
+        padding: var(--padding) 0;
+        margin: 0 var(--padding);
+        background-color: var(--accent-color);    
+        border-radius: var(--border-radius);    
+        transition: all 0.15s linear;    
+        box-shadow: var(--padding) 0 0 var(--accent-color), -0.2rem 0 0 var(--accent-color);        
+    }
+
+    .project-description {
+        display: block;
+        margin-top: 20px; 
+        font-size: 1.6rem;        
+    }
+
+    .contacts {
+        display: block;
+        margin: 0;
+        padding: 60px 0;
+        background-color: var(--background-color);
+    }
+
+    .contacts .subheader {
+        padding: 0;
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+
+    .contacts h2 {
+        padding: 10px 0 40px 0;
+    }
+
+    .contacts a {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1023px;
+    }
 }
 
-.sub-subheader {
-    font-size: 1.2em;
-    opacity: 0.6;
-}
-
-.header a {
-    display: inline-block;
-    padding: 10px;
-    margin: 0;
-    background-color: var(--accent-color);
-    border-radius: var(--border-radius);
-    color: white;
-}
-
-.header a:hover {
-    opacity: 0.8;
-}
-
-.projects {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;   
-}
-
-.project {
-    display: block;
-    padding: 20px 0 40px 0;
-}
-
-.project-name {
-    font-size: 1.2em;        
-}
-
-.project-description {
-    display: block;
-    margin-top: 20px; 
-}
-
-.contacts {
-    display: block;
-    margin: 0;
-    padding: 60px 0;
-    width: 100%; 
-    background-color: var(--background-color);
-}
-
-.contacts .subheader {
-    padding: 0;
-    font-size: 1em;
-    margin-bottom: -10px;
-}
-
-.contacts h2 {
-    padding: 10px 0 40px 0;
+@media (max-width: 1024px) {
+    .container {
+        max-width: 767px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
     
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
 
+    .header{
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
 
+    .subheader {
+        font-size: 2rem;
+    }
 
+    h1 {
+        font-size: 20vw;        
+    }
+
+    h2 {
+        font-size: 12vw;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .project-name {
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+
+    .project-description {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
 
