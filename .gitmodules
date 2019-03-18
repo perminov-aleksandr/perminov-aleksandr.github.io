@@ -4,3 +4,7 @@
 [submodule "curriculum-vitae"]
 	path = curriculum-vitae
 	url = https://github.com/perminov-aleksandr/curriculum-vitae
+[submodule "tg-ui-contest"]
+	path = tg-ui-contest
+	url = https://github.com/perminov-aleksandr/tg-ui-contest
+	
